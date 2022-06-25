@@ -1,0 +1,22 @@
+{
+  "name": "svg-inline",
+  "version": "1.0.0",
+  "description": "A web component which load static svg file form uri to inline svg",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "keywords": [
+    "yrobot",
+    "web component",
+    "svg",
+    "inline"
+  ],
+  "author": "yrobot",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vite": "^2.9.12"
+  }
+}
