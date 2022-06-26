@@ -1,4 +1,4 @@
-# svg-inline
+# @yrobot/svg-inline
 
 A web component which load static svg file form uri to inline svg
 
@@ -26,12 +26,12 @@ There are 2 ways to load `svg-inline`:
 
 1. NPM
 
-- install package: run `yarn add svg-inline` or `npm install svg-inline`
-- import package: `import 'svg-inline'`
+- install package: run `yarn add @yrobot/svg-inline` or `npm install @yrobot/svg-inline`
+- import package: `import '@yrobot/svg-inline'`
 
 2. CDN
 
-- import script in html: `<script src="https://unpkg.com/svg-inline@latest/build/svg-inline.js"></script>`
+- import script in html: `<script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js"></script>`
 
 ### use `svg-inline` to load svg file
 
