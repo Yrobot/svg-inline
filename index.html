@@ -5,11 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>svg-inline</title>
+    <link href="./index.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="./icons/svg-inline.svg"
+      type="image/x-icon"
+    />
     <script type="module" src="./src/index.ts"></script>
+    <style>
+      .big {
+        width: 200px;
+        height: 200px;
+      }
+      .small {
+        width: 80px;
+        height: 80px;
+      }
+      .red {
+        fill: red;
+      }
+    </style>
   </head>
   <body>
-    <svg-inline
-      src="https://images.yrobot.top/2022-06-24/nocode-fill-23-50-05.svg"
-    />
+    <nav
+      class="fixed left-0 top-0 w-full h-16 bg-primary text-primary-content fill-white z-50"
+    >
+      <div
+        class="section-container h-full flex flex-row items-center justify-between"
+      >
+        <svg-inline
+          src="./icons/svg-inline.svg"
+          class="w-8 h-8 logo mr-4"
+        ></svg-inline>
+        <span class="text-lg font-semibold mr-auto select-none"
+          >SVG-INLINE</span
+        >
+        <a href="https://www.github.com/yrobot/svg-inline" class="btn"
+          >GET START
+          <svg-inline
+            src="./icons/arrow-right.svg"
+            class="w-4 h-4 fill-white ml-2"
+          ></svg-inline>
+        </a>
+      </div>
+    </nav>
+    <section class="pt-16 min-h-screen section-container">
+      <code> </code>
+      <svg-inline src="./icons/svg-inline.svg" class="big"></svg-inline>
+      <svg-inline src="./icons/svg-inline.svg" class="small"></svg-inline>
+      <svg-inline
+        width="100"
+        height="100"
+        src="./icons/svg-inline.svg"
+        class="red"
+      ></svg-inline>
+    </section>
+
+    <footer class="bg-primary text-primary-content">
+      <div class="section-container footer">
+        <div>
+          <svg-inline
+            src="./icons/svg-inline.svg"
+            class="w-12 h-12 logo"
+          ></svg-inline>
+          <div>
+            <p className="text-lg">SVG-INLINE</p>
+            <p>
+              Made by
+              <a
+                href="http://yrobot.top"
+                className="font-semibold underline ml-2"
+              >
+                Yrobot.
+              </a>
+            </p>
+          </div>
+        </div>
+        <div>
+          <span className="footer-title">产品</span>
+          <a className="" href="https://www.github.com/yrobot/svg-inline">
+            前往GitHub
+          </a>
+          <a className="" href="https://npm.com"> 前往NPM </a>
+        </div>
+        <div>
+          <span className="footer-title">关于作者</span>
+          <a className="" href="http://yrobot.top" target="_blank">
+            个人主页
+          </a>
+          <a className="" href="https://www.github.com/yrobot" target="_blank">
+            Github 主页
+          </a>
+          <a className="" href="https://blog.yrobot.top" target="_blank">
+            博客
+          </a>
+          <a className="" href="mailto:y_robot@yeah.net"> 邮件 </a>
+        </div>
+        <div>
+          <span className="footer-title">交流与反馈</span>
+          <a
+            className=""
+            href="https://www.github.com/yrobot/svg-inline/issues"
+            target="_blank"
+          >
+            前往 github 提 issue
+          </a>
+          <a
+            className=""
+            href="mailto:y_robot@yeah.net?subject='svg-inline交流与反馈'"
+          >
+            给作者发送邮件
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

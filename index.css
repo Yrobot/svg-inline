@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+@layer components {
+  .section-container {
+    @apply mx-auto box-content max-w-[1040px] px-4 md:px-8 xl:px-16;
+  }
+  .btn {
+    @apply bg-primary text-primary-content cursor-pointer select-none inline-flex items-center justify-center space-x-8 font-semibold;
+  }
+  .footer {
+    @apply grid grid-cols-4 gap-4 py-8;
+  }
+  .footer-title {
+    @apply uppercase text-lg font-bold text-opacity-50;
+  }
+  .footer > div {
+    @apply flex flex-col space-y-4 text-sm;
+  }
+  .footer a {
+    @apply hover:underline;
+  }
+  .logo path {
+    fill: white;
+  }
+}
