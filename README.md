@@ -31,7 +31,7 @@ There are 2 ways to load `svg-inline`:
 
 2. CDN
 
-- import script in html: `<script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js"></script>`
+- import script in html: `<script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script>`
 
 ### use `svg-inline` to load svg file
 
