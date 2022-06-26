@@ -18,6 +18,10 @@ A web component which load static svg file form uri to inline svg
 </svg-inline>
 ```
 
+## Demos
+
+- [Pure HTML](https://codepen.io/yrobot/pen/bGvbgqR)
+
 ## How To Start
 
 ### load `svg-inline`
