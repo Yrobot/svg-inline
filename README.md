@@ -44,3 +44,13 @@ There are 2 ways to load `svg-inline`:
 | Prop | Type   | Description                       |
 | ---- | ------ | --------------------------------- |
 | src  | string | absolute or relative svg file uri |
+
+## History
+
+### Version 1.0.0
+
+**2022-06-23**
+
+- basic feature
+- support src prop
+- generate `viewBox` if not exist
