@@ -1,6 +1,7 @@
 # Node artifact files
 node_modules/
 build/
+build_website/
 
 # build files
 output.css

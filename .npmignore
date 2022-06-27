@@ -14,12 +14,14 @@ CVS
 npm-debug.log
 
 ## project files
-icons
-src
+package
+website
 node_modules
-index.css
 index.html
 postcss.config.js
 tailwind.config.js
 vite.config.ts
 yarn.lock
+
+## build
+build_website
