@@ -22,6 +22,13 @@ const TYPE_CONFIG_MAP = {
   [TYPES.WEBSITE]: {
     build: {
       outDir: "build_website",
+      rollupOptions: {
+        output: {
+          entryFileNames: `assets/[name].js`,
+          chunkFileNames: `assets/[name].js`,
+          assetFileNames: `assets/[name].[ext]`,
+        },
+      },
     },
     publicDir: "website/public",
   },
