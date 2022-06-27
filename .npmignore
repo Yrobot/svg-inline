@@ -14,6 +14,7 @@ CVS
 npm-debug.log
 
 ## project files
+.github
 package
 website
 node_modules
