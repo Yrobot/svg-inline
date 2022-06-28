@@ -20,6 +20,7 @@ const TYPE_CONFIG_MAP = {
     },
   },
   [TYPES.WEBSITE]: {
+    base: "./",
     build: {
       outDir: "build_website",
       rollupOptions: {
