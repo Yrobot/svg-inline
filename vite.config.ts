@@ -20,7 +20,6 @@ const TYPE_CONFIG_MAP = {
     },
   },
   [TYPES.WEBSITE]: {
-    base: "/svg-inline/",
     build: {
       outDir: "build_website",
       rollupOptions: {
