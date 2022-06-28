@@ -1,4 +1,4 @@
-export default class InlineSVG extends HTMLElement {
+export default class InlineSVG extends HTMLImageElement {
   src: string;
 }
 declare global {
