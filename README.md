@@ -1,8 +1,22 @@
-# @yrobot/svg-inline
+<p align="center">
+  <a href="https://yrobot.github.io/svg-inline/" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="https://yrobot.github.io/svg-inline/svg-inline.svg" alt="svg-inline logo">
+  </a>
+</p>
+<br/>
+<p align="center">
+  <a href="https://www.npmjs.com/package/@yrobot/svg-inline"><img src="https://img.shields.io/npm/v/@yrobot/svg-inline.svg" alt="npm package"></a>
+</p>
+<br/>
+
+# [@yrobot/svg-inline](https://yrobot.github.io/svg-inline/)
 
 A web component which load static svg file form uri to inline svg
 
-`https://example.com/example.svg`  
+```html
+<svg-inline src="https://example.com/example.svg"></svg-inline>
+```
+
 =>
 
 ```html
