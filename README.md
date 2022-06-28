@@ -63,6 +63,12 @@ There are 2 ways to load `svg-inline`:
 | ---- | ------ | --------------------------------- |
 | src  | string | absolute or relative svg file uri |
 
+## TODO
+
+1. ts usage
+2. react usage
+3. next.js usage
+
 ## History
 
 ### Version 1.0.0
