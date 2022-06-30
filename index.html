@@ -29,12 +29,8 @@
       <div
         class="section-container h-full flex flex-row items-center justify-between"
       >
-        <svg-inline
-          src="./svg-inline.svg"
-          class="w-8 h-8 logo mr-4"
-        ></svg-inline>
-        <span class="text-lg font-semibold mr-auto select-none"
-          >svg-inline</span
+        <span class="text-lg font-semibold mr-auto select-none text-logo"
+          >@yrobot/svg-inline</span
         >
         <a href="https://www.github.com/yrobot/svg-inline" class="btn"
           >START IT
@@ -45,16 +41,14 @@
         </a>
       </div>
     </nav>
-    <section class="pt-16 min-h-screen section-container">
-      <img src="./svg-inline.svg" class="big" />
-      <svg-inline src="./svg-inline.svg" class="big"></svg-inline>
-      <svg-inline src="./svg-inline.svg" class="small"></svg-inline>
-      <svg-inline
-        width="100"
-        height="100"
-        src="./svg-inline.svg"
-        class="red"
-      ></svg-inline>
+    <section
+      class="pt-16 min-h-[600px] section-container flex flex-col items-center justify-center space-y-6"
+    >
+      <svg-inline src="./svg-inline.svg" class="w-24 h-24"></svg-inline>
+      <h1 class="section-title">@yrobot/svg-inline</h1>
+      <p class="section-second-title">
+        A web component which load static svg file form uri to inline svg
+      </p>
     </section>
 
     <footer class="bg-primary text-primary-content">
@@ -65,7 +59,7 @@
             class="w-12 h-12 logo"
           ></svg-inline>
           <div>
-            <p className="text-lg">svg-inline</p>
+            <p className="text-logo">@yrobot/svg-inline</p>
             <p>
               Made by
               <a
