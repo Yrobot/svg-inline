@@ -12,10 +12,10 @@
     @apply bg-primary text-primary-content cursor-pointer select-none inline-flex items-center justify-center space-x-8 font-semibold;
   }
   .footer {
-    @apply grid grid-cols-4 gap-4 py-8;
+    @apply grid grid-cols-1 sm:grid-cols-4 gap-4 py-8;
   }
   .footer-title {
-    @apply uppercase text-lg font-bold text-opacity-50;
+    @apply uppercase text-xs font-bold opacity-50;
   }
   .footer > div {
     @apply flex flex-col space-y-4 text-sm;
@@ -35,7 +35,7 @@
     @apply slides font-extrabold text-xl tracking-tighter select-none;
   }
   .section-title {
-    @apply text-center text-5xl sm:text-6xl font-semibold mb-8;
+    @apply text-center text-4xl sm:text-6xl font-semibold mb-8;
   }
   .section-second-title {
     @apply text-center text-base sm:text-xl mb-12;
