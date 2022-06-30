@@ -41,6 +41,7 @@
         </a>
       </div>
     </nav>
+
     <section
       class="pt-16 min-h-[600px] section-container flex flex-col items-center justify-center space-y-6"
     >
@@ -49,6 +50,18 @@
       <p class="section-second-title">
         A web component which load static svg file form uri to inline svg
       </p>
+    </section>
+
+    <section class="py-12 section-container text-center">
+      <h1 class="section-title">How To Use</h1>
+      <h2 class="step-title">1. Install The svg-inline</h2>
+      <h4>Use npm to install the repo:</h4>
+      <pre><code class="language-bash">yarn add @yrobot/svg-inline</code></pre>
+      <pre><code class="language-bash">npm install @yrobot/svg-inline</code></pre>
+      <br />
+      <pre><code class="language-typescript">import "@yrobot/svg-inline"</code></pre>
+      <h4>Or you could use CDN to load the script:</h4>
+      <pre><code class="language-html"><script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script></code></pre>
     </section>
 
     <footer class="bg-primary text-primary-content">
@@ -102,6 +115,32 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("code").forEach(function (element) {
+        element.innerHTML = element.innerHTML
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      });
+    </script>
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+    />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/bash.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/typescript.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/html.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <!-- simple analytics -->
     <script
       async
