@@ -43,6 +43,7 @@
         </a>
       </div>
     </nav>
+
     <section
       class="pt-16 min-h-[600px] section-container flex flex-col items-center justify-center space-y-6"
     >
@@ -53,6 +54,18 @@
       </p>
     </section>
 
+    <section class="py-12 section-container text-center">
+      <h1 class="section-title">How To Use</h1>
+      <h2 class="step-title">1. Install The svg-inline</h2>
+      <h4>Use npm to install the repo:</h4>
+      <pre><code class="language-bash">yarn add @yrobot/svg-inline</code></pre>
+      <pre><code class="language-bash">npm install @yrobot/svg-inline</code></pre>
+      <br />
+      <pre><code class="language-typescript">import "@yrobot/svg-inline"</code></pre>
+      <h4>Or you could use CDN to load the script:</h4>
+      <pre><code class="language-html"><script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script></code></pre>
+    </section>
+
     <footer class="bg-primary text-primary-content">
       <div class="section-container footer">
         <div>
@@ -61,49 +74,42 @@
             class="w-12 h-12 logo"
           ></svg-inline>
           <div>
-            <p className="text-logo">@yrobot/svg-inline</p>
+            <p class="text-logo text-sm mb-1">@yrobot/svg-inline</p>
             <p>
               Made by
-              <a
-                href="http://yrobot.top"
-                className="font-semibold underline ml-2"
-              >
+              <a href="http://yrobot.top" class="font-semibold underline ml-2">
                 Yrobot.
               </a>
             </p>
           </div>
         </div>
         <div>
-          <span className="footer-title">产品</span>
-          <a className="" href="https://www.github.com/yrobot/svg-inline">
+          <span class="footer-title">产品</span>
+          <a class="" href="https://www.github.com/yrobot/svg-inline">
             前往GitHub
           </a>
-          <a className="" href="https://npm.com"> 前往NPM </a>
+          <a class="" href="https://npm.com"> 前往NPM </a>
         </div>
         <div>
-          <span className="footer-title">关于作者</span>
-          <a className="" href="http://yrobot.top" target="_blank">
-            个人主页
-          </a>
-          <a className="" href="https://www.github.com/yrobot" target="_blank">
+          <span class="footer-title">关于作者</span>
+          <a class="" href="http://yrobot.top" target="_blank"> 个人主页 </a>
+          <a class="" href="https://www.github.com/yrobot" target="_blank">
             Github 主页
           </a>
-          <a className="" href="https://blog.yrobot.top" target="_blank">
-            博客
-          </a>
-          <a className="" href="mailto:y_robot@yeah.net"> 邮件 </a>
+          <a class="" href="https://blog.yrobot.top" target="_blank"> 博客 </a>
+          <a class="" href="mailto:y_robot@yeah.net"> 邮件 </a>
         </div>
         <div>
-          <span className="footer-title">交流与反馈</span>
+          <span class="footer-title">交流与反馈</span>
           <a
-            className=""
+            class=""
             href="https://www.github.com/yrobot/svg-inline/issues"
             target="_blank"
           >
             前往 github 提 issue
           </a>
           <a
-            className=""
+            class=""
             href="mailto:y_robot@yeah.net?subject='svg-inline交流与反馈'"
           >
             给作者发送邮件
@@ -111,6 +117,32 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("code").forEach(function (element) {
+        element.innerHTML = element.innerHTML
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      });
+    </script>
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+    />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/bash.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/typescript.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/html.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <!-- simple analytics -->
     <script
       async
