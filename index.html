@@ -62,6 +62,7 @@
       <pre><code class="language-typescript">import "@yrobot/svg-inline"</code></pre>
       <h4>Or you could use CDN to load the script:</h4>
       <pre><code class="language-html"><script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script></code></pre>
+      <pre><code class="language-html"><title>Title</title></code></pre>
     </section>
 
     <footer class="bg-primary text-primary-content">
@@ -128,18 +129,22 @@
     <!-- highlight.js -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/styles/default.min.css"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/atom-one-dark.min.css"
     />
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/bash.min.js"></script>
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/typescript.min.js"></script>
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.0/languages/html.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
     <script>
       hljs.highlightAll();
+      addEventListener("load", function () {
+        var blocks = document.querySelectorAll("pre code.hljs");
+        Array.prototype.forEach.call(blocks, function (block) {
+          var language = block.result.language;
+          block.insertAdjacentHTML("afterbegin", `<label>${language}</label>`);
+        });
+      });
     </script>
     <!-- simple analytics -->
     <script
