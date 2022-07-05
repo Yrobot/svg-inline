@@ -1,14 +1,16 @@
-interface InlineSVGElement extends HTMLImageElement {
+export interface InlineSVGElement {
   src: string;
+  class?: string;
 }
+
 declare global {
   interface HTMLElementTagNameMap {
     "svg-inline": InlineSVGElement;
   }
-}
-export declare namespace JSX {
-  interface IntrinsicElements {
-    "svg-inline": InlineSVGElement;
+  namespace JSX {
+    interface IntrinsicElements {
+      "svg-inline": InlineSVGElement;
+    }
   }
 }
 

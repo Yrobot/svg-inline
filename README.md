@@ -66,13 +66,65 @@ There are 2 ways to load `svg-inline`:
 | src   | string | the url of svg file, complete url or relative/absolute path.                  |
 | class | string | the css class name list string, you could change inline svg display size here |
 
-## TODO
+## Common Usages
 
-1. ts usage
-2. react usage
-3. next.js usage
+### With TypeScript
+
+```tsx
+import React from "react";
+import { InlineSVGElement } from "@yrobot/svg-inline";
+
+export default function Icon({
+  icon = "",
+  className = "",
+  ...props
+}: { icon: string; className?: string } & Omit<
+  InlineSVGElement,
+  "src" | "class"
+>) {
+  return (
+    <svg-inline
+      {...props}
+      class={className}
+      src={`/icons/${icon}.svg`}
+    ></svg-inline>
+  );
+}
+```
+
+### With Next.js
+
+```tsx
+import React, { useEffect } from "react";
+import { InlineSVGElement } from "@yrobot/svg-inline";
+
+export default function Icon({
+  icon = "",
+  className = "",
+  ...props
+}: { icon: string; className?: string } & Omit<
+  InlineSVGElement,
+  "src" | "class"
+>) {
+  useEffect(() => {
+    import("@yrobot/svg-inline"); // avoid load svg-inline in SSR
+  }, []);
+  return (
+    <svg-inline
+      {...props}
+      class={className}
+      src={`/icons/${icon}.svg`}
+    ></svg-inline>
+  );
+}
+```
 
 ## History
+
+### Version 1.0.4
+
+- update \*.d.ts
+- update README for TypeScript, Next.js Usages
 
 ### Version 1.0.3
 
