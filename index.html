@@ -36,26 +36,13 @@
     </nav>
 
     <section
-      class="pt-16 min-h-[600px] section-container flex flex-col items-center justify-center space-y-6"
+      class="pt-16 min-h-screen section-container flex flex-col items-center justify-center space-y-6"
     >
       <svg-inline src="./svg-inline.svg" class="w-24 h-24"></svg-inline>
       <h1 class="section-title">@yrobot/svg-inline</h1>
       <p class="section-second-title">
         A web component which load static svg file form uri to inline svg
       </p>
-    </section>
-
-    <section class="py-12 section-container text-center">
-      <h1 class="section-title">How To Use</h1>
-      <h2 class="step-title">1. Install The svg-inline</h2>
-      <h4>Use npm to install the repo:</h4>
-      <pre><code class="language-bash">yarn add @yrobot/svg-inline</code></pre>
-      <pre><code class="language-bash">npm install @yrobot/svg-inline</code></pre>
-      <br />
-      <pre><code class="language-typescript">import "@yrobot/svg-inline"</code></pre>
-      <h4>Or you could use CDN to load the script:</h4>
-      <pre><code class="language-html"><script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script></code></pre>
-      <pre><code class="language-html"><title>Title</title></code></pre>
     </section>
 
     <footer class="bg-primary text-primary-content">
@@ -109,47 +96,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll("code").forEach(function (element) {
-        element.innerHTML = element.innerHTML
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      });
-    </script>
-    <!-- highlight.js -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/atom-one-dark.min.css"
-    />
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-      addEventListener("load", function () {
-        var blocks = document.querySelectorAll("pre code.hljs");
-        Array.prototype.forEach.call(blocks, function (block) {
-          var language = block.result.language;
-          block.insertAdjacentHTML("afterbegin", `<label>${language}</label>`);
-        });
-      });
-    </script>
-    <!-- simple analytics -->
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
-    ></script>
-    <noscript
-      ><img
-        src="https://queue.simpleanalyticscdn.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-    /></noscript>
   </body>
 </html>
