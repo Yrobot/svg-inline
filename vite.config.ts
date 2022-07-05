@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import dts from "vite-plugin-dts";
 
 enum TYPES {
   PACKAGE = "PACKAGE",
@@ -12,12 +12,13 @@ const TYPE_CONFIG_MAP = {
   [TYPES.PACKAGE]: {
     build: {
       lib: {
-        fileName: () => "svg-inline.js",
+        fileName: () => "index.js",
         entry: "package/index.ts",
         formats: ["es"],
       },
       outDir: "build",
     },
+    plugins: [dts()],
   },
   [TYPES.WEBSITE]: {
     base: "./",

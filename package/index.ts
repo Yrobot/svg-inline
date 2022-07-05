@@ -1,22 +1,19 @@
-// interface InlineSVG extends HTMLImageElement {
-//   src: string;
-// }
-// declare global {
-//   interface Window {
-//     InlineSVG: typeof InlineSVG;
-//   }
-//   interface HTMLElementTagNameMap {
-//     "svg-inline": InlineSVG;
-//   }
-// }
-// declare namespace JSX {
-//   interface IntrinsicElements {
-//     "svg-inline": InlineSVG;
-//   }
-// }
+interface InlineSVGElement extends HTMLImageElement {
+  src: string;
+}
+declare global {
+  interface HTMLElementTagNameMap {
+    "svg-inline": InlineSVGElement;
+  }
+}
+export declare namespace JSX {
+  interface IntrinsicElements {
+    "svg-inline": InlineSVGElement;
+  }
+}
 
-export const TAG_NAME = "svg-inline";
-const HOLDER_ESCAPE_PROPS = [
+const TAG_NAME = "svg-inline";
+const HOLDER_ESCAPE_PROPS: string[] = [
   // "width", "height"
 ];
 const SVG_ESCAPE_PROPS = ["class", "style", "src", "width", "height"];
@@ -45,7 +42,7 @@ class InlineSVG extends HTMLElement {
     super();
 
     const props: any = Array.from(this.attributes).reduce(
-      (pre, { name, value }) => {
+      (pre: { [key: string]: string }, { name, value }) => {
         pre[name] = value;
         return pre;
       },

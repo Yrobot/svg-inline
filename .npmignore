@@ -23,6 +23,7 @@ postcss.config.js
 tailwind.config.js
 vite.config.ts
 yarn.lock
+tsconfig.json
 
 ## build
 build_website
