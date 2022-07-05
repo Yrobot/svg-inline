@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://yrobot.github.io/svg-inline/" target="_blank" rel="noopener noreferrer">
+  <a href="https://yrobot.top/app/svg-inline" target="_blank" rel="noopener noreferrer">
     <img width="180" src="https://yrobot.github.io/svg-inline/svg-inline.svg" alt="svg-inline logo">
   </a>
 </p>
 <br/>
 <h2 align="center">
-  <a href="https://yrobot.github.io/svg-inline/">@yrobot/svg-inline</a>
+  <a href="https://yrobot.top/app/svg-inline">@yrobot/svg-inline</a>
 </h2>
 <p align="center">
   A web component which load static svg file form uri to inline svg
@@ -61,9 +61,10 @@ There are 2 ways to load `svg-inline`:
 
 ## Props
 
-| Prop | Type   | Description                       |
-| ---- | ------ | --------------------------------- |
-| src  | string | absolute or relative svg file uri |
+| Prop  | Type   | Description                                                                   |
+| ----- | ------ | ----------------------------------------------------------------------------- |
+| src   | string | the url of svg file, complete url or relative/absolute path.                  |
+| class | string | the css class name list string, you could change inline svg display size here |
 
 ## TODO
 
