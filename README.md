@@ -74,6 +74,10 @@ There are 2 ways to load `svg-inline`:
 
 ## History
 
+### Version 1.0.1
+
+- add basic typescript declare: \*.d.ts
+
 ### Version 1.0.0
 
 **2022-06-23**
