@@ -1,3 +1,20 @@
+// interface InlineSVG extends HTMLImageElement {
+//   src: string;
+// }
+// declare global {
+//   interface Window {
+//     InlineSVG: typeof InlineSVG;
+//   }
+//   interface HTMLElementTagNameMap {
+//     "svg-inline": InlineSVG;
+//   }
+// }
+// declare namespace JSX {
+//   interface IntrinsicElements {
+//     "svg-inline": InlineSVG;
+//   }
+// }
+
 export const TAG_NAME = "svg-inline";
 const HOLDER_ESCAPE_PROPS = [
   // "width", "height"
