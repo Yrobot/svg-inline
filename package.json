@@ -5,7 +5,7 @@
   "main": "build/svg-inline.js",
   "scripts": {
     "dev": "type=WEBSITE vite",
-    "build": "yarn build:package & yarn build:website",
+    "build": "yarn build:package",
     "build:package": "type=PACKAGE vite build",
     "build:website": "type=WEBSITE vite build"
   },
