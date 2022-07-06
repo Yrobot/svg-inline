@@ -14,6 +14,10 @@ declare global {
   }
 }
 
+const throwError = (message: string) => {
+  throw new Error(`@yrobot/svg-inline Error: ${message}`);
+};
+
 const TAG_NAME = "svg-inline";
 const HOLDER_ESCAPE_PROPS: string[] = [
   // "width", "height"
@@ -55,11 +59,20 @@ class InlineSVG extends HTMLElement {
 
     if (props.src) {
       fetch(props.src)
-        .then((res) => res.text())
+        .then((res) => {
+          if (!res.ok)
+            throwError(
+              `Fetch for '${props.src}' returned ${res.status} (${res.statusText})`
+            );
+          return res.text();
+        })
         .then((row) => {
           const svg = new DOMParser()
             .parseFromString(row, "image/svg+xml")
             .getElementsByTagName("svg")[0];
+
+          if (!svg) throwError(`Failed to parse SVG from '${props.src}'`);
+
           Object.entries(props).forEach(([key, value]) => {
             if (!SVG_ESCAPE_PROPS.includes(key))
               svg.setAttribute(key, String(value));
@@ -76,6 +89,8 @@ class InlineSVG extends HTMLElement {
 
           this.appendChild(svg);
         });
+    } else {
+      throwError("Param src is required");
     }
   }
 }
