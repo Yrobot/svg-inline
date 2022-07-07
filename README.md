@@ -121,6 +121,11 @@ export default function Icon({
 
 ## History
 
+### Version 1.1.0
+
+- add observer on svg-inline.src
+- fix svg-inline is empty in react
+
 ### Version 1.0.4
 
 - update \*.d.ts
