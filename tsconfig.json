@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "jsx": "react",
     "strict": true,
     "noEmit": true,
     "declaration": true,
@@ -8,6 +9,7 @@
     "esModuleInterop": true
   },
   "include": [
-    "package/*.ts"
+    "package/*.ts",
+    "website/*.tsx"
   ]
 }

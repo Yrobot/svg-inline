@@ -19,27 +19,23 @@ const TYPE_CONFIG_MAP = {
       outDir: "build",
     },
     plugins: [dts()],
+    esbuild: {
+      minify: true,
+    },
   },
   [TYPES.WEBSITE]: {
     base: "./",
     build: {
       outDir: "build_website",
-      rollupOptions: {
-        output: {
-          entryFileNames: `[name].js`,
-          chunkFileNames: `[name].js`,
-          assetFileNames: `[name].[ext]`,
-        },
-      },
     },
     publicDir: "website/public",
+    esbuild: {
+      minify: false,
+    },
   },
 };
 
 // https://vitejs.dev/config/
 export default defineConfig({
   ...TYPE_CONFIG_MAP[type],
-  esbuild: {
-    minify: true, // type error here. jsdoc will show the reason
-  },
 });

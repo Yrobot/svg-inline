@@ -8,93 +8,32 @@
     <link rel="shortcut icon" href="./svg-inline.svg" type="image/x-icon" />
     <link href="./website/index.css" rel="stylesheet" />
     <script type="module" src="./package/index.ts"></script>
-    <style>
-      .big {
-        width: 200px;
-        height: 200px;
-      }
-      .small {
-        width: 80px;
-        height: 80px;
-      }
-      .red {
-        fill: red;
-      }
-    </style>
+    <script type="module" src="./website/index.tsx"></script>
   </head>
   <body>
-    <nav
-      class="fixed left-0 top-0 w-full h-16 bg-primary text-primary-content fill-white z-50"
+    <div id="root"></div>
+    <div
+      id="html-test"
+      class="relative w-full h-[50vh] flex items-center justify-center flex-col space-y-8"
     >
-      <div
-        class="section-container h-full flex flex-row items-center justify-between"
-      >
-        <span class="text-lg font-semibold mr-auto select-none text-logo"
-          >@yrobot/svg-inline</span
-        >
+      <svg-inline
+        src="/svg-inline.svg"
+        id="html-svg"
+        class="w-12 h-12"
+      ></svg-inline>
+      <div>
+        <button onclick="changeSVG()">Change</button>
       </div>
-    </nav>
-
-    <section
-      class="pt-16 min-h-screen section-container flex flex-col items-center justify-center space-y-6"
-    >
-      <svg-inline src="./svg-inline.svg" class="w-24 h-24"></svg-inline>
-      <h1 class="section-title">@yrobot/svg-inline</h1>
-      <p class="section-second-title">
-        A web component which load static svg file form uri to inline svg
-      </p>
-    </section>
-
-    <footer class="bg-primary text-primary-content">
-      <div class="section-container footer">
-        <div>
-          <svg-inline
-            src="./svg-inline.svg"
-            class="w-12 h-12 logo"
-          ></svg-inline>
-          <div>
-            <p class="text-logo text-sm mb-1">@yrobot/svg-inline</p>
-            <p>
-              Made by
-              <a href="http://yrobot.top" class="font-semibold underline ml-2">
-                Yrobot.
-              </a>
-            </p>
-          </div>
-        </div>
-        <div>
-          <span class="footer-title">产品</span>
-          <a class="" href="https://www.github.com/yrobot/svg-inline">
-            前往GitHub
-          </a>
-          <a class="" href="https://npm.com"> 前往NPM </a>
-        </div>
-        <div>
-          <span class="footer-title">关于作者</span>
-          <a class="" href="http://yrobot.top" target="_blank"> 个人主页 </a>
-          <a class="" href="https://www.github.com/yrobot" target="_blank">
-            Github 主页
-          </a>
-          <a class="" href="https://blog.yrobot.top" target="_blank"> 博客 </a>
-          <a class="" href="mailto:y_robot@yeah.net"> 邮件 </a>
-        </div>
-        <div>
-          <span class="footer-title">交流与反馈</span>
-          <a
-            class=""
-            href="https://www.github.com/yrobot/svg-inline/issues"
-            target="_blank"
-          >
-            前往 github 提 issue
-          </a>
-          <a
-            class=""
-            href="mailto:y_robot@yeah.net?subject='svg-inline交流与反馈'"
-          >
-            给作者发送邮件
-          </a>
-        </div>
-      </div>
-    </footer>
+    </div>
+    <script>
+      const changeSVG = () => {
+        const svgElem = document.getElementById("html-svg");
+        const currentSrc = svgElem.getAttribute("src");
+        svgElem.setAttribute(
+          "src",
+          currentSrc.includes("yrobot") ? "/svg-inline.svg" : "/yrobot.svg"
+        );
+      };
+    </script>
   </body>
 </html>

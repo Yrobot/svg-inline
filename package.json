@@ -4,7 +4,7 @@
   "description": "A web component which load static svg file form uri to inline svg",
   "main": "build/index.js",
   "scripts": {
-    "dev": "type=WEBSITE vite",
+    "dev": "type=WEBSITE vite --port 3001",
     "build": "yarn build:package",
     "build:package": "type=PACKAGE vite build",
     "build:website": "type=WEBSITE vite build"
@@ -19,10 +19,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "postcss": "^8.4.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4",
-    "vite": "^2.9.12",
+    "vite": "^2.9.13",
     "vite-plugin-dts": "^1.2.1"
   }
 }
