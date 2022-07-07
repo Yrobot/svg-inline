@@ -5,9 +5,10 @@
   "main": "build/index.js",
   "scripts": {
     "dev": "type=WEBSITE vite --port 3001",
-    "build": "yarn build:package",
+    "build": "yarn clean & yarn build:package",
     "build:package": "type=PACKAGE vite build",
-    "build:website": "type=WEBSITE vite build"
+    "build:website": "type=WEBSITE vite build",
+    "clean": "rm -rf build_website & rm -rf build"
   },
   "keywords": [
     "yrobot",
