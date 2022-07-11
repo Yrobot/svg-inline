@@ -119,6 +119,12 @@ export default function Icon({
 }
 ```
 
+## TODO
+
+- loading status handler
+- error status handler
+- server side render support
+
 ## History
 
 ### Version 1.1.0
