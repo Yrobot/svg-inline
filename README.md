@@ -61,10 +61,10 @@ There are 2 ways to load `svg-inline`:
 
 ## Props
 
-| Prop  | Type   | Description                                                                   |
-| ----- | ------ | ----------------------------------------------------------------------------- |
-| src   | string | the url of svg file, complete url or relative/absolute path.                  |
-| class | string | the css class name list string, you could change inline svg display size here |
+| Prop  | Type   | Description                                                                                                                              |
+| ----- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| src   | string | the url of svg file, complete url or relative/absolute path.                                                                             |
+| class | string | the css class name list string, you could change inline svg display size here. Notice the default web component display value is inline. |
 
 ## Common Usages
 
@@ -85,7 +85,7 @@ export default function Icon({
   return (
     <svg-inline
       {...props}
-      class={className}
+      class={`inline-block ${className}`}
       src={`/icons/${icon}.svg`}
     ></svg-inline>
   );
@@ -112,20 +112,35 @@ export default function Icon({
   return (
     <svg-inline
       {...props}
-      class={className}
+      class={`inline-block ${className}`}
       src={`/icons/${icon}.svg`}
     ></svg-inline>
   );
 }
 ```
 
-## TODO
+## Suggestions
+
+### 1. set a specific `display`, `width` and `height` for svg-inline, to avoid the page reflow.
+
+The default display value for web component is `inline`. You could read more about this [here](https://github.com/WICG/webcomponents/issues/224).
+
+And same as the img tag, if the svg-inline added without with and height, the page will reflow after the svg loaded.
+
+So for the optimization, if you want to set the size of svg-inline, you should set the `display` as `inline-block` or `block` first, then set the `width` and `height` manually.
+
+And here is the reason why i could not set this for you. [web component 在 SRR 的情况下会导致页面回流](https://blog.yrobot.top/blog/HTML5/WebComponent%E9%97%AE%E9%A2%98%E5%AE%9E%E5%BD%95#web-component-%E5%9C%A8-srr-%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E4%BC%9A%E5%AF%BC%E8%87%B4%E9%A1%B5%E9%9D%A2%E5%9B%9E%E6%B5%81)
+
+## Todo
 
 - loading status handler
 - error status handler
-- server side render support
 
 ## History
+
+### Version 1.2.0
+
+- remove default style set for svg-inline. (notice: the default style for web component is `display: inline;`)
 
 ### Version 1.1.0
 
@@ -142,8 +157,6 @@ export default function Icon({
 - add basic typescript declare: \*.d.ts
 
 ### Version 1.0.0
-
-**2022-06-23**
 
 - basic feature
 - support src prop

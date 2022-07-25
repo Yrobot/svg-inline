@@ -28,25 +28,6 @@ const TAG_NAME = "svg-inline";
 // ];
 const SVG_ESCAPE_PROPS = ["class", "style", "src", "width", "height"];
 
-const STYLE = `
-${TAG_NAME}{
-  display: inline-block;
-  font-size: 0;
-}
-${TAG_NAME}>svg{
-  width: 100%;
-  height: 100%;
-}
-`;
-const addStyleSheet = () => {
-  const style = document.createElement("style");
-  style.id = `${TAG_NAME}-stylesheet`;
-  style.textContent = STYLE;
-  document.head.appendChild(style);
-};
-
-addStyleSheet();
-
 class InlineSVG extends HTMLElement {
   /**
    * @description fetch svg from url and return rawData
@@ -116,6 +97,7 @@ class InlineSVG extends HTMLElement {
    */
   setChild = (child: Node) => {
     if (typeof this.replaceChildren == "function") {
+      // if browser support replaceChildren
       this.replaceChildren(child);
     } else {
       this.innerHTML = "";
@@ -128,6 +110,7 @@ class InlineSVG extends HTMLElement {
     if (props.src) {
       const rowData = await this.fetchSVG(props.src);
       const svg = this.parseSVG(rowData, props);
+      svg.setAttribute("style", "width:100%;height:100%;");
       this.setChild(svg);
     }
   };
