@@ -119,18 +119,20 @@ class InlineSVG extends HTMLElement {
     super();
   }
 
-  observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.attributeName === "src") this.render();
-    });
-  });
-
   connectedCallback() {
     this.render();
+  }
 
-    this.observer.observe(this, {
-      attributeFilter: ["src"],
-    });
+  // attributeChangedCallback listen keys set
+  static get observedAttributes() {
+    return ["src"];
+  }
+
+  attributeChangedCallback(
+    name: string
+    // , oldValue: unknown, newValue: unknown
+  ) {
+    if (name === "src") this.render();
   }
 }
 
