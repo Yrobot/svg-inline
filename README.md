@@ -138,7 +138,7 @@ And here is the reason why i could not set this for you. [web component 在 SRR 
 
 ## History
 
-### Version 1.2.1
+### Version 1.2.2
 
 - update attributes listener logic by using `attributeChangedCallback`
 
