@@ -138,6 +138,10 @@ And here is the reason why i could not set this for you. [web component 在 SRR 
 
 ## History
 
+### Version 1.2.1
+
+- update attributes listener logic by using `attributeChangedCallback`
+
 ### Version 1.2.0
 
 - remove default style set for svg-inline. (notice: the default style for web component is `display: inline;`)
