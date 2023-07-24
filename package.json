@@ -1,6 +1,6 @@
 {
   "name": "@yrobot/svg-inline",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A web component which load static svg file form uri to inline svg",
   "main": "build/index.js",
   "private": false,
