@@ -1,6 +1,11 @@
 export interface InlineSVGElement {
   src: string;
   class?: string;
+  style?:
+    | string
+    | {
+        [key: string]: string | undefined | number;
+      };
 }
 
 declare global {
