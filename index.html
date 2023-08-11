@@ -8,157 +8,34 @@
     <link rel="shortcut icon" href="./svg-inline.svg" type="image/x-icon" />
     
     
-    <style>
-      .big {
-        width: 200px;
-        height: 200px;
-      }
-      .small {
-        width: 80px;
-        height: 80px;
-      }
-      .red {
-        fill: red;
-      }
-    </style>
-    <script type="module" crossorigin src="./index.js"></script>
-    <link rel="stylesheet" href="./index.css">
+    
+    <script type="module" crossorigin src="./assets/index.1081c245.js"></script>
+    <link rel="stylesheet" href="./assets/index.852660c2.css">
   </head>
   <body>
-    <nav
-      class="fixed left-0 top-0 w-full h-16 bg-primary text-primary-content fill-white z-50"
+    <div id="root"></div>
+    <div
+      id="html-test"
+      class="relative w-full h-[50vh] flex items-center justify-center flex-col space-y-8"
     >
-      <div
-        class="section-container h-full flex flex-row items-center justify-between"
-      >
-        <span class="text-lg font-semibold mr-auto select-none text-logo"
-          >@yrobot/svg-inline</span
-        >
-        <a href="https://www.github.com/yrobot/svg-inline" class="btn"
-          >START IT
-          <svg-inline
-            src="./arrow-right.svg"
-            class="w-4 h-4 fill-white ml-2"
-          ></svg-inline>
-        </a>
+      <svg-inline
+        src="/svg-inline.svg"
+        id="html-svg"
+        class="inline-block w-16 h-16"
+      ></svg-inline>
+      <div>
+        <button onclick="changeSVG()">Change</button>
       </div>
-    </nav>
-
-    <section
-      class="pt-16 min-h-[600px] section-container flex flex-col items-center justify-center space-y-6"
-    >
-      <svg-inline src="./svg-inline.svg" class="w-24 h-24"></svg-inline>
-      <h1 class="section-title">@yrobot/svg-inline</h1>
-      <p class="section-second-title">
-        A web component which load static svg file form uri to inline svg
-      </p>
-    </section>
-
-    <section class="py-12 section-container text-center">
-      <h1 class="section-title">How To Use</h1>
-      <h2 class="step-title">1. Install The svg-inline</h2>
-      <h4>Use npm to install the repo:</h4>
-      <pre><code class="language-bash">yarn add @yrobot/svg-inline</code></pre>
-      <pre><code class="language-bash">npm install @yrobot/svg-inline</code></pre>
-      <br />
-      <pre><code class="language-typescript">import "@yrobot/svg-inline"</code></pre>
-      <h4>Or you could use CDN to load the script:</h4>
-      <pre><code class="language-html"><script src="https://unpkg.com/@yrobot/svg-inline@latest/build/svg-inline.js" type='module'></script></code></pre>
-      <pre><code class="language-html"><title>Title</title></code></pre>
-    </section>
-
-    <footer class="bg-primary text-primary-content">
-      <div class="section-container footer">
-        <div>
-          <svg-inline
-            src="./svg-inline.svg"
-            class="w-12 h-12 logo"
-          ></svg-inline>
-          <div>
-            <p class="text-logo text-sm mb-1">@yrobot/svg-inline</p>
-            <p>
-              Made by
-              <a href="http://yrobot.top" class="font-semibold underline ml-2">
-                Yrobot.
-              </a>
-            </p>
-          </div>
-        </div>
-        <div>
-          <span class="footer-title">产品</span>
-          <a class="" href="https://www.github.com/yrobot/svg-inline">
-            前往GitHub
-          </a>
-          <a class="" href="https://npm.com"> 前往NPM </a>
-        </div>
-        <div>
-          <span class="footer-title">关于作者</span>
-          <a class="" href="http://yrobot.top" target="_blank"> 个人主页 </a>
-          <a class="" href="https://www.github.com/yrobot" target="_blank">
-            Github 主页
-          </a>
-          <a class="" href="https://blog.yrobot.top" target="_blank"> 博客 </a>
-          <a class="" href="mailto:y_robot@yeah.net"> 邮件 </a>
-        </div>
-        <div>
-          <span class="footer-title">交流与反馈</span>
-          <a
-            class=""
-            href="https://www.github.com/yrobot/svg-inline/issues"
-            target="_blank"
-          >
-            前往 github 提 issue
-          </a>
-          <a
-            class=""
-            href="mailto:y_robot@yeah.net?subject='svg-inline交流与反馈'"
-          >
-            给作者发送邮件
-          </a>
-        </div>
-      </div>
-    </footer>
+    </div>
     <script>
-      document.querySelectorAll("code").forEach(function (element) {
-        element.innerHTML = element.innerHTML
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      });
+      const changeSVG = () => {
+        const svgElem = document.getElementById("html-svg");
+        const currentSrc = svgElem.getAttribute("src");
+        svgElem.setAttribute(
+          "src",
+          currentSrc.includes("yrobot") ? "/svg-inline.svg" : "/yrobot.svg"
+        );
+      };
     </script>
-    <!-- highlight.js -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/atom-one-dark.min.css"
-    />
-    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-      addEventListener("load", function () {
-        var blocks = document.querySelectorAll("pre code.hljs");
-        Array.prototype.forEach.call(blocks, function (block) {
-          var language = block.result.language;
-          block.insertAdjacentHTML("afterbegin", `<label>${language}</label>`);
-        });
-      });
-    </script>
-    <!-- simple analytics -->
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
-    ></script>
-    <noscript
-      ><img
-        src="https://queue.simpleanalyticscdn.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-    /></noscript>
   </body>
 </html>
