@@ -141,4 +141,8 @@ class InlineSVG extends HTMLElement {
   }
 }
 
-customElements.define(TAG_NAME, InlineSVG);
+if (customElements.get(TAG_NAME) === undefined) {
+  customElements.define(TAG_NAME, InlineSVG);
+} else {
+  console.warn(`@yrobot/svg-inline Warn: ${TAG_NAME} is already defined`);
+}
