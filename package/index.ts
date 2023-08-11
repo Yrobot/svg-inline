@@ -33,7 +33,7 @@ const TAG_NAME = "svg-inline";
 // ];
 const SVG_ESCAPE_PROPS = ["class", "style", "src", "width", "height"];
 
-class InlineSVG extends HTMLElement {
+export default class InlineSVG extends HTMLElement {
   /**
    * @description fetch svg from url and return rawData
    * @author Yrobot
@@ -141,7 +141,10 @@ class InlineSVG extends HTMLElement {
   }
 }
 
-if (customElements.get(TAG_NAME) === undefined) {
+if (
+  customElements !== undefined &&
+  customElements.get(TAG_NAME) === undefined
+) {
   customElements.define(TAG_NAME, InlineSVG);
 } else {
   console.warn(`@yrobot/svg-inline Warn: ${TAG_NAME} is already defined`);

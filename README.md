@@ -119,6 +119,16 @@ export default function Icon({
 }
 ```
 
+or import the web component and register it:
+
+```ts
+import InlineSVG from "@yrobot/svg-inline";
+
+if (typeof window !== "undefined") {
+  window.customElements.define("svg-inline", InlineSVG);
+}
+```
+
 ## Suggestions
 
 ### 1. set a specific `display`, `width` and `height` for svg-inline, to avoid the page reflow.
@@ -170,3 +180,7 @@ And here is the reason why i could not set this for you. [web component 在 SRR 
 - basic feature
 - support src prop
 - generate `viewBox` if not exist
+
+```
+
+```
