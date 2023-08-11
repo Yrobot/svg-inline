@@ -138,6 +138,11 @@ And here is the reason why i could not set this for you. [web component 在 SRR 
 
 ## History
 
+### Version 1.2.4
+
+- Fix Bug: Failed to execute 'define' on 'CustomElementRegistry': the name "svg-inline" has already been used with this registry
+  - add checker before the customElements.define
+
 ### Version 1.2.2
 
 - update attributes listener logic by using `attributeChangedCallback`
